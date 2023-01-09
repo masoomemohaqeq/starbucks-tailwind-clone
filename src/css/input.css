@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accordion */
+.custom-accordion input:checked ~ .custom-accordion-content{
+    top: 0;
+    max-height: 500px;
+}
+
+.custom-accordion input:checked ~ div label i{
+    transform: rotate(180deg);
+}
