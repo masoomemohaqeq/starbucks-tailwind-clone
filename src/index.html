@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,27 +25,100 @@
     <!-- Style -->
     <link rel="stylesheet" href="../dist/output.css" />
 
+    <!-- Tile -->
     <title>Starbucks</title>
   </head>
   <body>
     <!-- Top Navigation Bar  -->
-    <nav class="flex justify-between items-center h-16 shadow-md px-4">
+    <nav
+      class="flex justify-between items-center h-16 relative shadow-md px-4 z-20"
+    >
       <img
         src="./img/starbucks-logo-png-transparent.png"
         alt=""
         class="inline-block w-8"
       />
-      <i class="fa-solid fa-bars"></i>
+      <div class="hamburger-container">
+        <input
+          type="checkbox"
+          class="toggler"
+          name="hamburger-toggler"
+          id="hamburger-toggler"
+        />
+        <div class="hamburger"><label for="hamburger-toggler"></label></div>
+      </div>
     </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-wrapper" id="menu-wrapper">
+      <div class="menu-layer"></div>
+      <div class="menu">
+        <ul class="pt-8">
+          <li class="menu-item">
+            <label class="" for="menunom1">
+              <input class="" type="radio" name="menunom1" id="menunom1" />
+              Menu
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+            <ul class="menu level-inner">
+              <li class="menu-item menu-item-header">
+                <label class="" for="menunom2">
+                  <input
+                    class=""
+                    type="checkbox"
+                    name="menu-level-inner"
+                    id="menunom2"
+                  />
+                  <i class="fa-solid fa-chevron-left"></i>
+                  Menu
+                </label>
+              </li>
+              <li class="menu-item">
+                <label> All Products </label>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#"> Rewards </a>
+          </li>
+          <li class="menu-item">
+            <a href="#"> Gift Cards </a>
+          </li>
+        </ul>
+        <!-- Divider -->
+        <hr class="m-8" />
+        <div class="mx-8 space-x-2">
+          <a
+            href="#"
+            class="inline-block text-base font-medium py-1 px-4 border border-black rounded-3xl"
+            >Sign in</a
+          >
+          <a
+            href="#"
+            class="inline-block text-base font-medium py-1 px-4 text-white bg-black rounded-3xl"
+            >Join now</a
+          >
+        </div>
+
+        <a href="#" class="flex items-center text-base font-semibold mx-8 my-6">
+          <i class="fa-solid fa-location-dot text-xl mr-3"></i>
+          Find a store
+        </a>
+      </div>
+    </div>
 
     <!-- Header -->
     <header>
       <!-- Header Banner -->
-      <section class="bg-lightGreen text-darkGreen text-center space-y-6 p-8">
-        <h3 class="text-lg font-bold">Start fresh with Starbucks Rewards</h3>
-        <p class="font-medium">
-          <a class="underline" href="#">Join</a> today to earn your way to free
-          coffe and treats
+      <section
+        class="bg-lightGreen text-darkGreen text-center space-y-6 py-8 px-6"
+      >
+        <h3 class="text-xl font-semibold">
+          Start fresh with Starbucks Rewards
+        </h3>
+        <p>
+          <a class="underline hover:no-underline" href="#">Join</a> today to
+          earn your way to free coffe and treats
         </p>
       </section>
     </header>
@@ -54,32 +128,32 @@
       <!-- Banner #1 -->
       <section class="mt-8 bg-mdGreen text-white">
         <img src="./img/137-82556.webp" alt="brew" />
-        <div class="py-6 px-7 space-y-6 text-center">
-          <h2 class="text-2xl font-semibold">New year, cool new brew</h2>
-          <p class="text-lg font-semibold">
+        <div class="p-5 space-y-6 text-center">
+          <h2 class="text-3xl font-medium">New year, cool new brew</h2>
+          <p class="text-xl">
             Introducing Pistachio Cream Cold Brew—bold, smooth coffee topped
             with pistachio cream cold foam.
           </p>
           <a
             href="#"
-            class="inline-block text-sm font-semibold rounded-3xl border px-4 py-1 my-4"
+            class="inline-block font-medium rounded-3xl border px-4 py-1 my-4 hover:bg-white/10 transition-all"
             >Try it now</a
           >
         </div>
       </section>
 
       <!-- Banner #2 -->
-      <section class="mt-8 bg-mdManhattan">
+      <section class="mt-8 bg-lightGreen text-darkGreen">
         <img src="./img/137-82557.webp" alt="brew" />
-        <div class="py-6 px-7 space-y-6 text-center">
-          <h2 class="text-2xl font-semibold">Long walks with pistachio</h2>
-          <p class="text-lg font-semibold">
-            Keep it cozy with a Pistachio Latte finished with a brown-buttery
-            topping.
+        <div class="p-5 space-y-6 text-center">
+          <h2 class="text-3xl font-medium">Pistachio your way</h2>
+          <p class="text-xl">
+            Our creamy Pistachio Frappuccino® blended beverage satisfies all
+            your winter cravings.
           </p>
           <a
             href="#"
-            class="inline-block text-sm font-semibold rounded-3xl border px-4 py-1 my-4"
+            class="inline-block font-medium rounded-3xl border border-mdGreen px-4 py-1 my-4 hover:bg-black/10 transition-all"
             >Order now</a
           >
         </div>
@@ -90,11 +164,11 @@
     <div class="mt-10 text-center py-8 text-sm font-medium">
       <p>*At participating stores.</p>
     </div>
-    <footer class="shadow-top py-5">
-      <!-- Navigation Bar -->
 
-      <!-- First Menu -->
-      <ul class="custom-accordion overflow-hidden font-semibold px-4">
+    <!-- Footer -->
+    <footer class="shadow-top py-5 px-4">
+      <!-- Category Menu -->
+      <ul class="custom-accordion overflow-hidden text-lg">
         <li
           class="relative overflow-hidden transition-all ease-out duration-500"
         >
@@ -179,6 +253,82 @@
           </ul>
         </li>
       </ul>
+
+      <!-- Divider -->
+      <hr class="border-1 my-5" />
+
+      <!-- Socail Icons -->
+      <ul class="text-lg flex space-x-2">
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10">
+            <i
+              class="fa-brands fa-spotify text-3xl leading-none rounded-full absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-facebook text-3xl leading-none rounded-full absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-pinterest text-3xl leading-none rounded-full absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-square-instagram text-3xl leading-none rounded-sm absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-square-youtube text-3xl leading-none rounded-sm absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-square-twitter text-3xl leading-none rounded-sm absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+      </ul>
+
+      <!-- Footer Menu -->
+      <ul class="py-5 space-y-4 font-normal text-darkBlack text-sm">
+        <li>
+          <a href="#" class="hover:underline">Privacy Notice </a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Terms of Use </a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline"
+            >Do Not Share My Personal Information
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">CA Supply Chain Act</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Cookie Preferences</a>
+        </li>
+      </ul>
+
+      <!-- Copy Right -->
+      <p class="text-sm text-lightGray">
+        © 2023 Starbucks Coffee Company. All rights reserved.
+      </p>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
