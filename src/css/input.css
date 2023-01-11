@@ -2,12 +2,235 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Accordion */
-.custom-accordion input:checked ~ .custom-accordion-content{
-    top: 0;
-    max-height: 500px;
+/* Fonts */
+@layer base {
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Light.ttf);
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Regular.ttf);
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Medium.ttf);
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-SemiBold.ttf);
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Bold.ttf);
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-ExtraBold.ttf);
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Black.ttf);
+    font-weight: 900;
+  }
 }
 
-.custom-accordion input:checked ~ div label i{
-    transform: rotate(180deg);
+* {
+  font-weight: 500;
 }
+
+/* Hamburger Menu*/
+.hamburger-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-container > .toggler {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.hamburger-container > .hamburger {
+  width: 100%;
+  height: fit-content;
+}
+
+/* Hamburger Line */
+.hamburger-container > .hamburger > label {
+  position: relative;
+  background-color: rgb(97, 97, 97);
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  border-radius: 1px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.hamburger-container > .hamburger > label::before,
+.hamburger-container > .hamburger > label::after {
+  position: absolute;
+  content: "";
+  background-color: inherit;
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  border-radius: 1px;
+  top: -6px;
+}
+
+/* Moves Line Down */
+.hamburger-container > .hamburger > label::after {
+  top: 6px;
+}
+
+/* Toggler Animation */
+.hamburger-container > .toggler:checked + .hamburger > label {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.hamburger-container > .toggler:checked + .hamburger > label:before,
+.hamburger-container > .toggler:checked + .hamburger > label:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.hamburger-container > .toggler:checked:hover + .hamburger > label {
+  transform: rotate(225deg);
+}
+
+.menu-wrapper {
+  transition: 1s;
+  /* width: 100vw;
+  height: 100vh; */
+  position: absolute;
+  background: transparent;
+}
+
+/* 
+.menu-wrapper {
+  display: none;
+}
+
+nav .hamburger-container > .toggler:checked ~ .menu-wrapper {
+  display: block;
+} */
+
+/* Layer */
+.menu-layer {
+  position: absolute;
+  background-color: black;
+  opacity: 0;
+  width: 100vw;
+  min-height: 100vh;
+  /* top: 4rem; */
+  left: 0;
+  transition: 0.3s ease-in;
+}
+
+.menu {
+  transform: translateX(200vw);
+  position: absolute;
+  background-color: white;
+  width: 80vw;
+  min-height: 100vh;
+  right: 0;
+  /* padding-top: 1.25rem; */
+  font-size: 1.3rem;
+  color: black;
+  transition: 0.3s ease-in;
+}
+
+/* Show Menu */
+.menu-wrapper {
+  /* display: none; */
+}
+
+.menu-wrapper.show {
+  /* display: block; */
+}
+
+.menu-wrapper.show .menu-layer {
+  opacity: 0.4;
+}
+
+.menu-wrapper.show .menu {
+  transform: translateX(100vw);
+}
+
+.menu.level-inner {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu-item {
+  padding: 1rem 2rem;
+}
+
+.menu-item label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item-header {
+  background-color: #0000000d;
+}
+
+.menu-item-header label {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.menu-item-header label > i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-item label > input {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.menu-item label > i {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* End Hamburger Menu */
+
+/* Accordion */
+.custom-accordion input:checked ~ .custom-accordion-content {
+  top: 0;
+  max-height: 500px;
+}
+
+.custom-accordion input:checked ~ div label i {
+  transform: rotate(180deg);
+}
+/* End Accordion */

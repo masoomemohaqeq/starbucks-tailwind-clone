@@ -43,7 +43,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: sofia, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -419,6 +419,62 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: sofia;
+
+  src: url(/src/fonts/static/SofiaSans-Light.ttf);
+
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: sofia;
+
+  src: url(/src/fonts/static/SofiaSans-Regular.ttf);
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: sofia;
+
+  src: url(/src/fonts/static/SofiaSans-Medium.ttf);
+
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: sofia;
+
+  src: url(/src/fonts/static/SofiaSans-SemiBold.ttf);
+
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: sofia;
+
+  src: url(/src/fonts/static/SofiaSans-Bold.ttf);
+
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: sofia;
+
+  src: url(/src/fonts/static/SofiaSans-ExtraBold.ttf);
+
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: sofia;
+
+  src: url(/src/fonts/static/SofiaSans-Black.ttf);
+
+  font-weight: 900;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -541,9 +597,48 @@ video {
   float: right;
 }
 
+.m-8 {
+  margin: 2rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .mt-8 {
@@ -552,6 +647,14 @@ video {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .inline-block {
@@ -566,6 +669,10 @@ video {
   height: 4rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -578,8 +685,20 @@ video {
   width: 100%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -592,6 +711,18 @@ video {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -600,8 +731,26 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .border {
   border-width: 1px;
+}
+
+.border-mdGreen {
+  --tw-border-opacity: 1;
+  border-color: rgb(61 113 112 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-lightGreen {
@@ -614,18 +763,18 @@ video {
   background-color: rgb(61 113 112 / var(--tw-bg-opacity));
 }
 
-.bg-mdManhattan {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 197 161 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.p-8 {
-  padding: 2rem;
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-4 {
@@ -633,19 +782,14 @@ video {
   padding-right: 1rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .py-8 {
@@ -653,23 +797,42 @@ video {
   padding-bottom: 2rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-center {
   text-align: center;
 }
 
-.text-lg {
-  font-size: 1.125rem;
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-sm {
@@ -677,16 +840,35 @@ video {
   line-height: 1.25rem;
 }
 
-.font-bold {
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-semibold {
   font-weight: 700;
 }
 
 .font-medium {
+  font-weight: 600;
+}
+
+.font-normal {
   font-weight: 500;
 }
 
-.font-semibold {
-  font-weight: 600;
+.leading-none {
+  line-height: 1;
 }
 
 .text-darkGreen {
@@ -701,6 +883,10 @@ video {
 
 .text-lightGray {
   color: #00000094;
+}
+
+.text-darkBlack {
+  color: rgba(0,0,0,.85);
 }
 
 .underline {
@@ -741,13 +927,226 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+/* Fonts */
+
+* {
+  font-weight: 500;
+}
+
+/* Hamburger Menu*/
+
+.hamburger-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-container > .toggler {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.hamburger-container > .hamburger {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+/* Hamburger Line */
+
+.hamburger-container > .hamburger > label {
+  position: relative;
+  background-color: rgb(97, 97, 97);
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  border-radius: 1px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+
+.hamburger-container > .hamburger > label::before,
+.hamburger-container > .hamburger > label::after {
+  position: absolute;
+  content: "";
+  background-color: inherit;
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  border-radius: 1px;
+  top: -6px;
+}
+
+/* Moves Line Down */
+
+.hamburger-container > .hamburger > label::after {
+  top: 6px;
+}
+
+/* Toggler Animation */
+
+.hamburger-container > .toggler:checked + .hamburger > label {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+
+.hamburger-container > .toggler:checked + .hamburger > label:before,
+.hamburger-container > .toggler:checked + .hamburger > label:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+
+.hamburger-container > .toggler:checked:hover + .hamburger > label {
+  transform: rotate(225deg);
+}
+
+.menu-wrapper {
+  transition: 1s;
+  /* width: 100vw;
+  height: 100vh; */
+  position: absolute;
+  background: transparent;
+}
+
+/* 
+.menu-wrapper {
+  display: none;
+}
+
+nav .hamburger-container > .toggler:checked ~ .menu-wrapper {
+  display: block;
+} */
+
+/* Layer */
+
+.menu-layer {
+  position: absolute;
+  background-color: black;
+  opacity: 0;
+  width: 100vw;
+  min-height: 100vh;
+  /* top: 4rem; */
+  left: 0;
+  transition: 0.3s ease-in;
+}
+
+.menu {
+  transform: translateX(200vw);
+  position: absolute;
+  background-color: white;
+  width: 80vw;
+  min-height: 100vh;
+  right: 0;
+  /* padding-top: 1.25rem; */
+  font-size: 1.3rem;
+  color: black;
+  transition: 0.3s ease-in;
+}
+
+/* Show Menu */
+
+.menu-wrapper {
+  /* display: none; */
+}
+
+.menu-wrapper.show {
+  /* display: block; */
+}
+
+.menu-wrapper.show .menu-layer {
+  opacity: 0.4;
+}
+
+.menu-wrapper.show .menu {
+  transform: translateX(100vw);
+}
+
+.menu.level-inner {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu-item {
+  padding: 1rem 2rem;
+}
+
+.menu-item label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item-header {
+  background-color: #0000000d;
+}
+
+.menu-item-header label {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.menu-item-header label > i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-item label > input {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.menu-item label > i {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* End Hamburger Menu */
+
 /* Accordion */
 
-.custom-accordion input:checked ~ .custom-accordion-content{
+.custom-accordion input:checked ~ .custom-accordion-content {
   top: 0;
   max-height: 500px;
 }
 
-.custom-accordion input:checked ~ div label i{
+.custom-accordion input:checked ~ div label i {
   transform: rotate(180deg);
+}
+
+/* End Accordion */
+
+.hover\:bg-white\/10:hover {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+.hover\:bg-black\/10:hover {
+  background-color: rgb(0 0 0 / 0.1);
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:no-underline:hover {
+  text-decoration-line: none;
+}
+
+.hover\:shadow-hoverShadow:hover {
+  --tw-shadow: 0px -1px 0px 8px rgba(0,0,0,0.1);;
+  --tw-shadow-colored: 0px -1px 0px 8px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
