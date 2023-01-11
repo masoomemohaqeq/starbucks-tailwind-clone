@@ -51,7 +51,7 @@
   font-weight: 500;
 }
 
-/* Hamburger Menu*/
+/* ------------------------Hamburger Menu*/
 .hamburger-container {
   position: relative;
   width: 20px;
@@ -119,22 +119,12 @@
   transform: rotate(225deg);
 }
 
+/* Menu Wrapper */
 .menu-wrapper {
   transition: 1s;
-  /* width: 100vw;
-  height: 100vh; */
   position: absolute;
   background: transparent;
 }
-
-/* 
-.menu-wrapper {
-  display: none;
-}
-
-nav .hamburger-container > .toggler:checked ~ .menu-wrapper {
-  display: block;
-} */
 
 /* Layer */
 .menu-layer {
@@ -143,11 +133,11 @@ nav .hamburger-container > .toggler:checked ~ .menu-wrapper {
   opacity: 0;
   width: 100vw;
   min-height: 100vh;
-  /* top: 4rem; */
   left: 0;
   transition: 0.3s ease-in;
 }
 
+/* Menu */
 .menu {
   transform: translateX(200vw);
   position: absolute;
@@ -155,33 +145,27 @@ nav .hamburger-container > .toggler:checked ~ .menu-wrapper {
   width: 80vw;
   min-height: 100vh;
   right: 0;
-  /* padding-top: 1.25rem; */
   font-size: 1.3rem;
   color: black;
   transition: 0.3s ease-in;
 }
 
-/* Show Menu */
-.menu-wrapper {
-  /* display: none; */
-}
-
-.menu-wrapper.show {
-  /* display: block; */
-}
-
+/* Menu Layer Show */
 .menu-wrapper.show .menu-layer {
   opacity: 0.4;
 }
 
+/* Menu Show */
 .menu-wrapper.show .menu {
   transform: translateX(100vw);
 }
 
-.menu.level-inner {
+/* Menu Inner Level */
+.menu.inner-level {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .menu-item {
@@ -222,9 +206,20 @@ nav .hamburger-container > .toggler:checked ~ .menu-wrapper {
   opacity: 0.7;
 }
 
-/* End Hamburger Menu */
+.multi-level-input {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
 
-/* Accordion */
+/* Show Inner Level Menu By Checkbox */
+.multi-level-input:checked + .menu.inner-level {
+  transform: translateX(0);
+}
+
+/* !---------------------End Hamburger Menu */
+
+/* ----------------------Accordion */
 .custom-accordion input:checked ~ .custom-accordion-content {
   top: 0;
   max-height: 500px;
@@ -233,4 +228,4 @@ nav .hamburger-container > .toggler:checked ~ .menu-wrapper {
 .custom-accordion input:checked ~ div label i {
   transform: rotate(180deg);
 }
-/* End Accordion */
+/* !-----------------------End Accordion */

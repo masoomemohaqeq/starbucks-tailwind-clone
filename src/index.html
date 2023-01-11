@@ -55,26 +55,35 @@
       <div class="menu">
         <ul class="pt-8">
           <li class="menu-item">
-            <label class="" for="menunom1">
-              <input class="" type="radio" name="menunom1" id="menunom1" />
+            <label class="" for="menunom2">
               Menu
               <i class="fa-solid fa-chevron-right"></i>
             </label>
-            <ul class="menu level-inner">
-              <li class="menu-item menu-item-header">
+            <input
+              class="multi-level-input"
+              type="checkbox"
+              name="menunom2"
+              id="menunom2"
+              value="Menu"
+            />
+            <ul class="menu inner-level">
+              <li class="menu-item menu-item-header" name="close-inner-level">
                 <label class="" for="menunom2">
-                  <input
-                    class=""
-                    type="checkbox"
-                    name="menu-level-inner"
-                    id="menunom2"
-                  />
                   <i class="fa-solid fa-chevron-left"></i>
-                  Menu
+                  <span name="close-inner-level-text">Menu</span>
                 </label>
               </li>
               <li class="menu-item">
                 <label> All Products </label>
+              </li>
+              <li class="menu-item">
+                <label> Featured </label>
+              </li>
+              <li class="menu-item">
+                <label> Previous Orders </label>
+              </li>
+              <li class="menu-item">
+                <label> Favorite Products </label>
               </li>
             </ul>
           </li>
