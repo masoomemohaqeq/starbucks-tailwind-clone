@@ -245,6 +245,12 @@ body {
 /* Media Queries */
 @media (min-width: 640px) {
   html {
-    font-size: 18px;
+    /* font-size: 18px; */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    /* font-size: 20px; */
   }
 }

@@ -16,6 +16,16 @@ module.exports = {
       extrabold: 900,
       black: 900,
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "6rem",
+        "2xl": "12rem",
+      },
+    },
     extend: {
       fontFamily: {
         sans: ["sofia", ...defaultTheme.fontFamily.sans],
