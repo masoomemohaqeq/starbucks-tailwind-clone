@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./img/starbucks-logo-png-transparent.png"
+    />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <!-- Tile -->
+    <title>Starbucks</title>
+  </head>
+  <body>
+    <!-- Top Navigation Bar  -->
+    <nav class="relative shadow-md z-20">
+      <div
+        class="flex justify-between items-center h-16 relative px-4 z-20 lg:px-8"
+      >
+        <!-- Logo Img -->
+        <a href="/src/index.html" class="inline-block w-8 sm:mr-4 lg:w-10">
+          <img
+            src="./img/starbucks-logo-png-transparent.png"
+            alt=""
+            class="w-full"
+          />
+        </a>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger-container sm:hidden">
+          <input
+            type="checkbox"
+            class="toggler"
+            name="hamburger-toggler"
+            id="hamburger-toggler"
+          />
+          <div class="hamburger"><label for="hamburger-toggler"></label></div>
+        </div>
+
+        <!-- Main Desktop Menu -->
+        <div class="hidden sm:block left-0 mr-auto uppercase text-sm">
+          <ul class="flex space-x-4">
+            <li class="h-16 leading-[4rem] border-b-4 border-mdGreen">
+              <a href="/src/menu.html" class="font-semibold hover:text-mdGreen"
+                >Menu</a
+              >
+            </li>
+            <li class="h-16 leading-[4rem]">
+              <a href="#" class="font-semibold hover:text-mdGreen">Rewards</a>
+            </li>
+            <li class="h-16 leading-[4rem]">
+              <a href="#" class="font-semibold hover:text-mdGreen"
+                >Gift Cards</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Desktop buttons -->
+        <div class="hidden sm:block text-sm">
+          <a href="#" class="font-semibold mr-4 hover:text-mdGreen">
+            <i class="fa-solid align-middle fa-location-dot text-xl mr-2"></i>
+            Find a store
+          </a>
+          <a
+            href="#"
+            class="inline-block font-medium py-1 px-4 border border-black rounded-3xl mr-2 hover:bg-black/10 transition-all"
+            >Sign in</a
+          >
+          <a
+            href="#"
+            class="inline-block font-medium py-1 px-4 text-white bg-black rounded-3xl hover:bg-black/80 transition-all"
+            >Join now</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-wrapper lg:hidden" id="menu-wrapper">
+      <div class="menu-layer"></div>
+      <div class="menu">
+        <ul class="pt-8">
+          <li class="menu-item">
+            <label class="" for="menunom2">
+              Menu
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+            <input
+              class="multi-level-input"
+              type="checkbox"
+              name="menunom2"
+              id="menunom2"
+              value="Menu"
+            />
+            <ul class="menu inner-level">
+              <li class="menu-item menu-item-header" name="close-inner-level">
+                <label class="" for="menunom2">
+                  <i class="fa-solid fa-chevron-left"></i>
+                  <span name="close-inner-level-text">Menu</span>
+                </label>
+              </li>
+              <li class="menu-item">
+                <label><a href="/src/menu.html"> All Products</a> </label>
+              </li>
+              <li class="menu-item">
+                <label> <a href="/src/menu.html">Featured</a> </label>
+              </li>
+              <li class="menu-item">
+                <label> <a href="/src/menu.html">Previous Orders</a> </label>
+              </li>
+              <li class="menu-item">
+                <label> <a href="/src/menu.html">Favorite Products</a> </label>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#"> Rewards </a>
+          </li>
+          <li class="menu-item">
+            <a href="#"> Gift Cards </a>
+          </li>
+        </ul>
+        <!-- Divider -->
+        <hr class="m-8" />
+        <div class="mx-8 space-x-2">
+          <a
+            href="#"
+            class="inline-block text-base font-medium py-1 px-4 border border-black rounded-3xl"
+            >Sign in</a
+          >
+          <a
+            href="#"
+            class="inline-block text-base font-medium py-1 px-4 text-white bg-black rounded-3xl"
+            >Join now</a
+          >
+        </div>
+
+        <a href="#" class="flex items-center text-base font-semibold mx-8 my-6">
+          <i class="fa-solid fa-location-dot text-xl mr-3"></i>
+          Find a store
+        </a>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <main>
+      <!-- Breadcrumb -->
+      <ul class="flex text-black text-sm px-3 space-x-1 py-3 lg:pl-36">
+        <li><a href="menu.html">Menu</a> /</li>
+        <li><a href="#"> Hot Coffees /</a></li>
+        <li class="font-bold"><a href="#"> Caffe Americano</a></li>
+      </ul>
+
+      <!-- Product Area -->
+      <article>
+        <!-- Product Banner -->
+        <div
+          class="bg-darkGreen text-white text-center lg:flex justify-center items-center xl:justify-start xl:gap-44 xl:pl-40"
+        >
+          <img
+            class="w-2/3 mx-auto md:w-1/3 lg:w-64 lg:mx-4"
+            src="/src/img/products/cafe-americano-lg.webp"
+            alt="cafe-americano"
+          />
+          <div class="">
+            <h1 class="text-3xl font-bold mb-2">Caffe Americano</h1>
+            <span class="text-xl opacity-70 mb-2 inline-block"
+              >15 calories
+              <sup
+                class="text-lg font-light"
+                title="Information is based on standard recipes and does not reflect customizations"
+                >&#9432;</sup
+              ></span
+            >
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div>
+          <!-- Size & Customizations -->
+          <div class="px-5 lg:grid grid-cols-2 lg:pl-36 2xl:w-2/3">
+            <!-- Size -->
+            <section class="pt-10 max-w-[385px] mx-auto lg:mx-0">
+              <h2
+                class="text-xl font-semibold py-2 border-b-4 border-lightGreen"
+              >
+                Size options
+              </h2>
+              <div
+                class="flex justify-center items-center relative py-10 size-options"
+              >
+                <div
+                  id="moving-anim"
+                  class="moving-anim w-1/6 absolute top-10 transition-all duration-150 delay-150 ease-out left-[66.666668%]"
+                >
+                  <div
+                    class="w-16 h-16 bg-lightGreen rounded-full border-2 border-mdGreen"
+                  ></div>
+                </div>
+                <!-- Size #1 -->
+                <div class="w-1/6">
+                  <label
+                    class="flex justify-center items-center flex-col"
+                    for="short"
+                  >
+                    <div
+                      class="moving-anim-wrapper w-16 h-16 relative rounded-full"
+                    >
+                      <input
+                        class="absolute w-0 h-0"
+                        type="radio"
+                        name="size"
+                        id="short"
+                      />
+
+                      <div class="w-full h-full icon short selected absolute">
+                        <img
+                          class="not-selected absolute abs-center-x bottom-3"
+                          src="/src/img/product-icons/short.svg"
+                          alt=""
+                        />
+                        <img
+                          class="selected absolute abs-center-x bottom-3 transition delay-150"
+                          src="/src/img/product-icons/short-selected.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <span class="inline-block font-semibold">Short</span>
+                    <span class="text-sm">8 fl oz</span>
+                  </label>
+                </div>
+                <!-- Size #2 -->
+                <div class="w-1/6">
+                  <label
+                    class="flex justify-center items-center flex-col"
+                    for="tall"
+                  >
+                    <div
+                      class="moving-anim-wrapper w-16 h-16 relative rounded-full"
+                    >
+                      <input
+                        class="absolute w-0 h-0"
+                        type="radio"
+                        name="size"
+                        id="tall"
+                      />
+                      <div class="w-full h-full icon short selected absolute">
+                        <img
+                          class="not-selected absolute abs-center-x bottom-3"
+                          src="/src/img/product-icons/tall.svg"
+                          alt=""
+                        />
+                        <img
+                          class="selected absolute abs-center-x bottom-3 transition delay-150"
+                          src="/src/img/product-icons/tall-selected.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <span class="inline-block font-semibold">Tall</span>
+                    <span class="text-sm">12 fl oz</span>
+                  </label>
+                </div>
+                <!-- Size #3 -->
+                <div class="w-1/6">
+                  <label
+                    class="flex justify-center items-center flex-col"
+                    for="grande"
+                  >
+                    <div
+                      class="moving-anim-wrapper w-16 h-16 relative rounded-full"
+                    >
+                      <input
+                        class="absolute w-0 h-0"
+                        type="radio"
+                        name="size"
+                        id="grande"
+                      />
+                      <div class="w-full h-full icon short selected absolute">
+                        <img
+                          class="not-selected absolute abs-center-x bottom-3"
+                          src="/src/img/product-icons/grande.svg"
+                          alt=""
+                        />
+                        <img
+                          class="selected absolute abs-center-x bottom-3 transition delay-150"
+                          src="/src/img/product-icons/grande-selected.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <span class="inline-block font-semibold">Grande</span>
+                    <span class="text-sm">16 fl oz</span>
+                  </label>
+                </div>
+                <!-- Size #4 -->
+                <div class="w-1/6">
+                  <label
+                    class="flex justify-center items-center flex-col"
+                    for="venti"
+                  >
+                    <div
+                      class="moving-anim-wrapper w-16 h-16 relative rounded-full"
+                    >
+                      <input
+                        class="absolute w-0 h-0"
+                        type="radio"
+                        name="size"
+                        id="venti"
+                        checked
+                      />
+                      <div class="w-full h-full icon short selected absolute">
+                        <img
+                          class="not-selected absolute abs-center-x bottom-3"
+                          src="/src/img/product-icons/Venti.svg"
+                          alt=""
+                        />
+                        <img
+                          class="selected absolute abs-center-x bottom-3 transition delay-150"
+                          src="/src/img/product-icons/Venti-selected.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <span class="inline-block font-semibold">Venti</span>
+                    <span class="text-sm">20 fl oz</span>
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <!-- Customization -->
+            <section class="pt-10 max-w-[385px] mx-auto lg:mx-0">
+              <h2
+                class="text-xl font-semibold py-2 border-b-4 border-lightGreen"
+              >
+                Customizations
+              </h2>
+              <div class="mt-6 mb-4">
+                <!-- Item #1 -->
+                <div class="py-4 relative btn-animated-one">
+                  <label
+                    class="border border-gray-400 rounded-lg p-3 flex justify-between relative"
+                    for="chkOne"
+                  >
+                    <span>Flavors</span> <span>Edit</span>
+                  </label>
+                  <input
+                    type="checkbox"
+                    id="chkOne"
+                    name="chkOne"
+                    class="modal-chk absolute w-0 h-0"
+                  />
+                  <!-- Modal -->
+                  <div
+                    class="modal lg:bg-black/20 fixed opacity-0 invisible top-0 right-0 bottom-0 left-0 z-50 transition delay-100"
+                  >
+                    <div
+                      class="bg-white w-full h-full lg:px-24 lg:w-2/3 lg:mr-0 lg:ml-auto 2xl:w-1/2"
+                    >
+                      <!-- Header -->
+                      <div class="h-32 shadow-md lg:shadow-none z-[60]">
+                        <div
+                          class="flex justify-between items-center pt-[4.5rem] pt- px-4"
+                        >
+                          <h4 class="text-2xl font-bold">Flavors</h4>
+                          <button
+                            class="text-darkGreenTwo py-1 px-3 border rounded-3xl border-darkGreenTwo"
+                          >
+                            Reset
+                          </button>
+                        </div>
+                        <label
+                          for="chkOne"
+                          class="absolute right-10 top-7 text-black/50 text-2xl font-normal"
+                        >
+                          <i class="fa-solid fa-close"></i>
+                        </label>
+                      </div>
+                      <!-- Body -->
+                      <div>
+                        <!-- Part 1 -->
+                        <div>
+                          <div
+                            class="uppercase py-2 px-4 text-sm font-bold bg-black/10 text-gray-600 lg:bg-white lg:border-b-2"
+                          >
+                            Syrups
+                          </div>
+                          <!-- Items -->
+                          <div>
+                            <div class="py-6 px-4 relative btn-animated-one">
+                              <div
+                                class="border border-gray-400 rounded-lg p-3 flex justify-between relative"
+                                for="chktwo"
+                              >
+                                <span>Flavors</span>
+                                <div class="space-x-2 counter">
+                                  <button class="text-darkGreenTwo text-lg">
+                                    <i class="fa-solid fa-minus-circle"></i>
+                                  </button>
+                                  <span class="counter-text">1</span>
+                                  <button class="text-darkGreenTwo text-lg">
+                                    <i class="fa-solid fa-plus-circle"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button
+                      class="fixed right-5 bottom-5 shadow-2xl rounded-full bg-darkGreenTwo px-5 py-4 text-white text-xl font-bold"
+                    >
+                      Done
+                    </button>
+                  </div>
+                </div>
+                <!-- Item #2 -->
+                <div class="py-4 relative btn-animated-one">
+                  <label
+                    class="border border-gray-400 rounded-lg p-3 flex justify-between relative"
+                    for="Toppings"
+                  >
+                    <span>Toppings</span> <span>Edit</span>
+                  </label>
+                  <input
+                    type="checkbox"
+                    id="Toppings"
+                    name="Toppings"
+                    class="modal-chk absolute w-0 h-0"
+                  />
+                  <!-- Modal -->
+                  <div
+                    class="modal bg-white lg:bg-black/20 fixed opacity-0 invisible top-0 right-0 bottom-0 left-0 z-50 transition delay-100"
+                  >
+                    <!-- Header -->
+                    <div class="h-32 shadow-md z-[60]">
+                      <div
+                        class="flex justify-between items-center pt-[4.5rem] pt- px-4"
+                      >
+                        <h4 class="text-2xl font-bold">Toppings</h4>
+                        <button
+                          class="text-darkGreenTwo py-1 px-3 border rounded-3xl border-darkGreenTwo"
+                        >
+                          Reset
+                        </button>
+                      </div>
+                      <label
+                        for="Toppings"
+                        class="absolute right-10 top-7 text-black/50 text-2xl font-normal"
+                      >
+                        <i class="fa-solid fa-close"></i>
+                      </label>
+                    </div>
+                    <!-- Body -->
+                    <div>
+                      <!-- Part 1 -->
+                      <div>
+                        <div
+                          class="uppercase py-2 px-4 text-sm font-bold bg-black/10 text-gray-600"
+                        >
+                          Syrups
+                        </div>
+                        <!-- Items -->
+                        <div>
+                          <div class="py-6 px-4 relative btn-animated-one">
+                            <select
+                              class="border w-full border-gray-400 rounded-lg p-3 flex justify-between relative"
+                              for="Toppings"
+                            >
+                              <option value="Barista Cocoa Powder" selected>
+                                Barista Cocoa Powder
+                              </option>
+                              <option value="Extra Barista Cocoa Powder">
+                                Extra Barista Cocoa Powder
+                              </option>
+                              <option value="Light Barista Cocoa Powder">
+                                Light Barista Cocoa Powder
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Part 2 -->
+                    </div>
+                    <button
+                      class="fixed right-5 bottom-5 shadow-2xl rounded-full bg-darkGreenTwo px-5 py-4 text-white text-xl font-bold"
+                    >
+                      Done
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- Info -->
+          <div class="bg-darkGreen w-full lg:pl-36">
+            <div
+              class="max-w-md mx-auto py-6 px-4 space-y-5 text-sm lg:ml-0 lg: pl-0"
+            >
+              <span
+                class="inline-block border border-DarkYellow rounded-md px-1 py-0 text-DarkYellow text-sm"
+                >150 <i class="fa-solid fa-star text-xs"></i> item</span
+              >
+              <p class="text-white/70">
+                Espresso shots topped with hot water create a light layer of
+                crema culminating in this wonderfully rich cup with depth and
+                nuance.
+              </p>
+              <span class="text-white inline-block"
+                >5 calories, 0g sugar, 0g fat
+                <sup class="text-white/70">&#9432;</sup></span
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+      <button
+        class="fixed right-5 bottom-5 z-30 shadow-2xl rounded-full bg-darkGreenTwo px-5 py-4 text-white text-xl font-bold"
+      >
+        Add to Order
+      </button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="shadow-top py-5 px-4 lg:px-7 2xl:pr-0">
+      <!-- Category Menu -->
+      <!-- Accordion Menu -->
+      <ul class="custom-accordion overflow-hidden text-lg lg:hidden">
+        <li
+          class="relative overflow-hidden transition-all ease-out duration-500"
+        >
+          <input
+            type="checkbox"
+            name="sectionA"
+            id="sectionA"
+            class="opacity-0 absolute"
+          />
+          <div class="py-5 relative z-20 bg-white">
+            <label for="sectionA" class="inline-block w-full"
+              >About Us
+              <i
+                class="fa-solid fa-chevron-down right-0 float-right transition-all"
+              ></i>
+            </label>
+          </div>
+          <ul
+            class="custom-accordion-content text-lightGray space-y-6 text-sm z-10 relative transition-all ease-out duration-500 delay-100 -top-96 max-h-0"
+          >
+            <li>Our Company</li>
+            <li>Our Coffee</li>
+            <li>Stories and News</li>
+            <li>Starbucks Archive</li>
+            <li>Investor Relations</li>
+            <li>Customer Service</li>
+          </ul>
+        </li>
+        <li
+          class="relative overflow-hidden transition-all ease-out duration-500"
+        >
+          <input
+            type="checkbox"
+            name="sectionB"
+            id="sectionB"
+            class="opacity-0 absolute"
+          />
+          <div class="py-5 relative z-20 bg-white">
+            <label for="sectionB" class="inline-block w-full"
+              >Careers
+              <i
+                class="fa-solid fa-chevron-down right-0 float-right transition-all"
+              ></i>
+            </label>
+          </div>
+
+          <ul
+            class="custom-accordion-content text-lightGray space-y-6 text-sm z-10 relative transition-all ease-out duration-500 delay-100 -top-96 max-h-0"
+          >
+            <li>Culture and Values</li>
+            <li>Inclusion, Diversity, and Equity</li>
+            <li>College Achievement Plan</li>
+            <li>Alumni Community</li>
+            <li>U.S. Careers</li>
+            <li>International Careers</li>
+          </ul>
+        </li>
+        <li
+          class="relative overflow-hidden transition-all ease-out duration-500"
+        >
+          <input
+            type="checkbox"
+            name="sectionC"
+            id="sectionC"
+            class="opacity-0 absolute"
+          />
+          <div class="py-5 relative z-20 bg-white">
+            <label for="sectionC" class="inline-block w-full"
+              >Social Impact
+              <i
+                class="fa-solid fa-chevron-down right-0 float-right transition-all"
+              ></i>
+            </label>
+          </div>
+
+          <ul
+            class="custom-accordion-content text-lightGray space-y-6 text-sm z-10 relative transition-all ease-out duration-500 delay-100 -top-96 max-h-0"
+          >
+            <li>People</li>
+            <li>Planet</li>
+            <li>Environmental and Social Impact Reporting</li>
+          </ul>
+        </li>
+      </ul>
+      <!-- desktop menu -->
+      <ul class="2xl:container hidden lg:flex space-x-6 text-xs">
+        <li class="flex-1">
+          <div class="py-5 relative bg-white text-sm">
+            <label for="sectionA" class="inline-block w-full">About Us </label>
+          </div>
+          <ul class="text-lightGray space-y-6">
+            <li>Our Company</li>
+            <li>Our Coffee</li>
+            <li>Stories and News</li>
+            <li>Starbucks Archive</li>
+            <li>Investor Relations</li>
+            <li>Customer Service</li>
+          </ul>
+        </li>
+        <li class="flex-1">
+          <div class="py-5 relative bg-white text-sm">
+            <label for="sectionA" class="inline-block w-full">Careers </label>
+          </div>
+          <ul class="text-lightGray space-y-6">
+            <li>Culture and Values</li>
+            <li>Inclusion, Diversity, and Equity</li>
+            <li>College Achievement Plan</li>
+            <li>Alumni Community</li>
+            <li>U.S. Careers</li>
+            <li>International Careers</li>
+          </ul>
+        </li>
+        <li class="flex-1">
+          <div class="py-5 relative bg-white text-sm">
+            <label for="sectionA" class="inline-block w-full"
+              >Social Impact
+            </label>
+          </div>
+          <ul class="text-lightGray space-y-6">
+            <li>People</li>
+            <li>Planet</li>
+            <li>Environmental and Social Impact Reporting</li>
+          </ul>
+        </li>
+        <li class="flex-1">
+          <div class="py-5 relative bg-white text-sm">
+            <label for="sectionA" class="inline-block w-full"
+              >For Business Partners
+            </label>
+          </div>
+          <ul class="text-lightGray space-y-6">
+            <li>Landlord Support Center</li>
+            <li>Suppliers</li>
+            <li>Corporate Gift Card Sales</li>
+            <li>Office and Foodservice Coffee</li>
+          </ul>
+        </li>
+        <li class="flex-1">
+          <div class="py-5 relative bg-white text-sm">
+            <label for="sectionA" class="inline-block w-full"
+              >Order and Pickup
+            </label>
+          </div>
+          <ul class="text-lightGray space-y-6">
+            <li>Culture and Values</li>
+            <li>Inclusion, Diversity, and Equity</li>
+            <li>College Achievement Plan</li>
+            <li>Alumni Community</li>
+            <li>U.S. Careers</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Divider -->
+      <hr class="2xl:container border-1 my-5" />
+
+      <!-- Socail Icons -->
+      <ul class="2xl:container text-lg flex space-x-2">
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10">
+            <i
+              class="fa-brands fa-spotify text-3xl leading-none rounded-full absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-facebook text-3xl leading-none rounded-full absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-pinterest text-3xl leading-none rounded-full absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-square-instagram text-3xl leading-none rounded-sm absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-square-youtube text-3xl leading-none rounded-sm absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="flex justify-center items-center w-10 h-10"
+            ><i
+              class="fa-brands fa-square-twitter text-3xl leading-none rounded-sm absolute hover:shadow-hoverShadow transition-all"
+            ></i
+          ></a>
+        </li>
+      </ul>
+
+      <!-- Footer Menu -->
+      <ul
+        class="2xl:container py-5 space-y-4 font-normal text-darkBlack text-sm lg:flex lg:space-y-0 lg:divide-x-2 divide-gray-700"
+      >
+        <li class="px-3">
+          <a href="#" class="hover:underline">Privacy Notice </a>
+        </li>
+        <li class="px-3">
+          <a href="#" class="hover:underline">Terms of Use </a>
+        </li>
+        <li class="px-3">
+          <a href="#" class="hover:underline"
+            >Do Not Share My Personal Information
+          </a>
+        </li>
+        <li class="px-3">
+          <a href="#" class="hover:underline">CA Supply Chain Act</a>
+        </li>
+        <li class="px-3">
+          <a href="#" class="hover:underline">Cookie Preferences</a>
+        </li>
+      </ul>
+
+      <!-- Copy Right -->
+      <p class="2xl:container text-sm text-lightGray">
+        © 2023 Starbucks Coffee Company. All rights reserved.
+      </p>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

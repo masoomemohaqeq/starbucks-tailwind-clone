@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+const { yellow } = require("color-name");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -38,9 +39,11 @@ module.exports = {
         lightGreen: "#D4E9E2",
         mdGreen: "#3d7170",
         darkGreen: "#1E3932",
+        darkGreenTwo: "#00754a",
         mdManhattan: "#f4c5a1",
         lightGray: "#00000094",
         darkBlack: "rgba(0,0,0,.85)",
+        DarkYellow: "#CBA258",
       },
     },
   },
