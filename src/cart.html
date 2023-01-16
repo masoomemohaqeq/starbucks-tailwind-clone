@@ -29,214 +29,131 @@
     <title>Starbucks</title>
   </head>
   <body>
-    <!-- Top Navigation Bar  -->
-    <nav class="relative shadow-md z-20">
-      <div
-        class="flex justify-between items-center h-16 relative px-4 z-20 lg:px-8 2xl:px-40 2xl:py-10 2xl:container"
-      >
-        <!-- Logo Img -->
-        <a href="/src/index.html" class="inline-block w-8 sm:mr-4 lg:w-10">
-          <img
-            src="./img/starbucks-logo-png-transparent.png"
-            alt=""
-            class="w-full"
-          />
-        </a>
-
-        <!-- Hamburger Icon -->
-        <div class="hamburger-container sm:hidden">
-          <input
-            type="checkbox"
-            class="toggler"
-            name="hamburger-toggler"
-            id="hamburger-toggler"
-          />
-          <div class="hamburger"><label for="hamburger-toggler"></label></div>
-        </div>
-
-        <!-- Main Desktop Menu -->
-        <div class="hidden sm:block left-0 mr-auto uppercase text-sm">
-          <ul class="flex space-x-4">
-            <li class="h-16 leading-[4rem] border-b-4 border-mdGreen">
-              <a href="/src/menu.html" class="font-semibold hover:text-mdGreen"
-                >Menu</a
-              >
-            </li>
-            <li class="h-16 leading-[4rem]">
-              <a href="#" class="font-semibold hover:text-mdGreen">Rewards</a>
-            </li>
-            <li class="h-16 leading-[4rem]">
-              <a href="#" class="font-semibold hover:text-mdGreen"
-                >Gift Cards</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <!-- Desktop buttons -->
-        <div class="hidden sm:block text-sm">
-          <a href="#" class="font-semibold mr-4 hover:text-mdGreen">
-            <i class="fa-solid align-middle fa-location-dot text-xl mr-2"></i>
-            Find a store
-          </a>
-          <a
-            href="#"
-            class="inline-block font-medium py-1 px-4 border border-black rounded-3xl mr-2 hover:bg-black/10 transition-all"
-            >Sign in</a
-          >
-          <a
-            href="#"
-            class="inline-block font-medium py-1 px-4 text-white bg-black rounded-3xl hover:bg-black/80 transition-all"
-            >Join now</a
-          >
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hamburger Menu -->
-    <div class="menu-wrapper lg:hidden" id="menu-wrapper">
-      <div class="menu-layer"></div>
-      <div class="menu">
-        <ul class="pt-8">
-          <li class="menu-item">
-            <label class="" for="menunom2">
-              Menu
-              <i class="fa-solid fa-chevron-right"></i>
-            </label>
-            <input
-              class="multi-level-input"
-              type="checkbox"
-              name="menunom2"
-              id="menunom2"
-              value="Menu"
-            />
-            <ul class="menu inner-level">
-              <li class="menu-item menu-item-header" name="close-inner-level">
-                <label class="" for="menunom2">
-                  <i class="fa-solid fa-chevron-left"></i>
-                  <span name="close-inner-level-text">Menu</span>
-                </label>
-              </li>
-              <li class="menu-item">
-                <label><a href="/src/menu.html"> All Products</a> </label>
-              </li>
-              <li class="menu-item">
-                <label> <a href="/src/menu.html">Featured</a> </label>
-              </li>
-              <li class="menu-item">
-                <label> <a href="/src/menu.html">Previous Orders</a> </label>
-              </li>
-              <li class="menu-item">
-                <label> <a href="/src/menu.html">Favorite Products</a> </label>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#"> Rewards </a>
-          </li>
-          <li class="menu-item">
-            <a href="#"> Gift Cards </a>
-          </li>
-        </ul>
-        <!-- Divider -->
-        <hr class="m-8" />
-        <div class="mx-8 space-x-2">
-          <a
-            href="#"
-            class="inline-block text-base font-medium py-1 px-4 border border-black rounded-3xl"
-            >Sign in</a
-          >
-          <a
-            href="#"
-            class="inline-block text-base font-medium py-1 px-4 text-white bg-black rounded-3xl"
-            >Join now</a
-          >
-        </div>
-
-        <a href="#" class="flex items-center text-base font-semibold mx-8 my-6">
-          <i class="fa-solid fa-location-dot text-xl mr-3"></i>
-          Find a store
-        </a>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="2xl:container">
-      <!-- Header Banner -->
-      <section
-        class="bg-lightGreen text-darkGreen text-center space-y-6 py-8 px-6"
-      >
-        <h3 class="text-xl font-semibold">
-          Start fresh with Starbucks Rewards
-        </h3>
-        <p>
-          <a class="underline hover:no-underline" href="#">Join</a> today to
-          earn your way to free coffe and treats
-        </p>
-      </section>
-    </header>
-
     <!-- Main -->
     <main>
-      <div class="2xl:container">
-        <!-- Banner #1 -->
-        <section
-          class="mt-8 bg-mdGreen text-white sm:flex odd:flex-row-reverse"
-        >
-          <img
-            src="./img/137-82556.webp"
-            alt="brew"
-            class="sm:flex-1 sm:w-1/2"
-          />
-          <div
-            class="px-5 py-7 space-y-6 text-center flex flex-col justify-between items-center sm:flex-1 sm:w-1/2 sm:px-8 lg:px-12 lg:justify-center"
-          >
-            <h2 class="text-3xl font-medium lg:text-5xl">
-              New year, cool new brew
-            </h2>
-            <p class="text-xl">
-              Introducing Pistachio Cream Cold Brew—bold, smooth coffee topped
-              with pistachio cream cold foam.
-            </p>
-            <a
-              href="#"
-              class="inline-block font-medium rounded-3xl border px-4 py-1 my-4 hover:bg-white/10 transition-all"
-              >Try it now</a
+      <div class="bg-gray-50 lg:flex">
+        <!-- Info -->
+        <div class="bg-darkGreen p-4 lg:w-80">
+          <div class="text-white lg:h-1/3">
+            <i class="fa-solid fa-chevron-left"></i>
+            <a href="/src/menu.html" class="hidden lg:inline-block"
+              >Back to menu</a
             >
           </div>
-        </section>
-
-        <!-- Banner #2 -->
-        <section
-          class="mt-8 bg-lightGreen text-darkGreen sm:flex odd:flex-row-reverse"
-        >
-          <img
-            src="./img/137-82557.webp"
-            alt="brew"
-            class="sm:flex-1 sm:w-1/2"
-          />
-          <div
-            class="px-5 py-7 space-y-6 text-center flex flex-col justify-between items-center sm:flex-1 sm:w-1/2 sm:px-8 lg:px-12 lg:justify-center"
-          >
-            <h2 class="text-3xl font-medium lg:text-5xl">Pistachio your way</h2>
-            <p class="text-xl">
-              Our creamy Pistachio Frappuccino® blended beverage satisfies all
-              your winter cravings.
-            </p>
-            <a
-              href="#"
-              class="inline-block font-medium rounded-3xl border border-mdGreen px-4 py-1 my-4 hover:bg-black/10 transition-all"
-              >Order now</a
+          <div class="lg:h-1/3">
+            <h2 class="text-lg text-white mt-3">Review Order(3)</h2>
+            <p class="text-lightGreen">Prep time: 6-9 min</p>
+            <p class="text-white/60 mt-4 text-sm">Pickup options</p>
+            <div
+              class="pickup-option bg-darkGreen rounded-sm grid grid-cols-2 border border-lightGreen text-white"
             >
+              <input
+                type="radio"
+                name="pickup"
+                id="inStore"
+                value="inStore"
+                class="absolute w-0 h-0"
+                checked
+              />
+              <label
+                for="inStore"
+                class="relative text-white justify-self-center w-full h-full rounded-l-sm"
+              >
+                <div class="selected relative z-0"></div>
+                <div
+                  class="relative z-10 text-wrapper flex justify-center flex-col items-center"
+                >
+                  <i class="fa-solid fa-person text-lg"></i>
+                  In store
+                </div>
+              </label>
+              <input
+                type="radio"
+                name="pickup"
+                id="driveThru"
+                value="driveThru"
+                class="absolute w-0 h-0"
+              />
+              <label
+                for="driveThru"
+                class="relative text-white justify-self-center w-full h-full rounded-r-sm"
+              >
+                <div
+                  class="relative z-10 flex justify-center flex-col items-center"
+                >
+                  <i class="fa-solid fa-car text-lg"></i>
+                  Drive thru
+                </div>
+              </label>
+            </div>
           </div>
-        </section>
+        </div>
+        <!-- Cart Items -->
+        <div class="pb-20 mx-auto">
+          <!-- Item #1 -->
+          <div
+            class="flex justify-start bg-white shadow-sm rounded-lg border-b space-x-6 pt-8 pb-10 px-6 md:w-[600px] md:mx-auto md:border md:mt-6"
+          >
+            <!-- Image -->
+            <img
+              src="/src/img/products/cafe-americano.webp"
+              class="rounded-full w-20 h-20"
+              alt="item"
+            />
+            <div class="">
+              <h2 class="text-2xl py-6">Caffe Americano</h2>
+              <!-- Details -->
+              <ul class="pb-3">
+                <li>Venti</li>
+                <li>3 pump(s) Brown Sugar Syrup</li>
+              </ul>
+              <!-- Quntity -->
+              <div class="space-x-2 text-xl text-gray-500">
+                <button>
+                  <i class="fa-solid fa-minus-circle"></i>
+                </button>
+                <button>
+                  <i class="fa-solid fa-plus-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Item #1 -->
+          <div
+            class="flex justify-start bg-white shadow-sm rounded-lg border-b space-x-6 pt-8 pb-10 px-6 md:w-[600px] md:mx-auto md:border md:mt-6"
+          >
+            <!-- Image -->
+            <img
+              src="/src/img/products/cafe-americano.webp"
+              class="rounded-full w-20 h-20"
+              alt="item"
+            />
+            <div class="">
+              <h2 class="text-2xl py-6">Caffe Americano</h2>
+              <!-- Details -->
+              <ul class="pb-3">
+                <li>Venti</li>
+                <li>3 pump(s) Brown Sugar Syrup</li>
+              </ul>
+              <!-- Quntity -->
+              <div class="space-x-2 text-xl text-gray-500">
+                <button>
+                  <i class="fa-solid fa-minus-circle"></i>
+                </button>
+                <button>
+                  <i class="fa-solid fa-plus-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="fixed right-5 bottom-5 z-30 shadow-2xl rounded-full bg-darkGreenTwo px-5 py-4 text-white text-xl font-bold"
+        >
+          Continue
+        </button>
       </div>
     </main>
-
-    <!-- Bar -->
-    <div class="mt-10 text-center py-8 text-sm font-medium">
-      <p>*At participating stores.</p>
-    </div>
 
     <!-- Footer -->
     <footer class="shadow-top py-5 px-4 lg:px-7">

@@ -1,0 +1,44 @@
+/* Fonts */
+@layer base {
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Light.ttf);
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Regular.ttf);
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Medium.ttf);
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-SemiBold.ttf);
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Bold.ttf);
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-ExtraBold.ttf);
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: sofia;
+    src: url(/src/fonts/static/SofiaSans-Black.ttf);
+    font-weight: 900;
+  }
+}

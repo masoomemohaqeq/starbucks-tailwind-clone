@@ -1,0 +1,7 @@
+.custom-accordion input:checked ~ .custom-accordion-content {
+  @apply top-0 max-h-[500px];
+}
+
+.custom-accordion input:checked ~ div label i {
+  @apply rotate-180;
+}

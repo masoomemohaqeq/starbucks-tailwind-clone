@@ -1,0 +1,8 @@
+/* Product Size Animation */
+.moving-anim-wrapper input:not(:checked) ~ .icon .selected {
+  @apply opacity-0;
+}
+
+.moving-anim-wrapper input:checked ~ .icon .selected {
+  @apply opacity-100;
+}

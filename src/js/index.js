@@ -1,11 +1,16 @@
 // Hamburger
 let hamburgerToggler = document.getElementById("hamburger-toggler");
 let menuWrapper = document.getElementById("menu-wrapper");
+let body = document.querySelector("body");
 
 hamburgerToggler.addEventListener("change", () => {
-  hamburgerToggler.checked
-    ? menuWrapper.classList.add("show")
-    : menuWrapper.classList.remove("show");
+  if (hamburgerToggler.checked) {
+    menuWrapper.classList.add("show");
+    body.classList.add("noScroll");
+  } else {
+    menuWrapper.classList.remove("show");
+    body.classList.remove("noScroll");
+  }
 });
 
 //Moving Animation for size

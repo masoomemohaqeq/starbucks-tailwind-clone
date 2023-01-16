@@ -1,0 +1,3 @@
+.animation-bg:active {
+  @apply bg-lightGreen transition;
+}
