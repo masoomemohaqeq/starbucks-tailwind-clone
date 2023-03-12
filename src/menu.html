@@ -7,20 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./img/starbucks-logo-png-transparent.png"
-    />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png" />
 
     <!-- Fontawesome -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
 
     <!-- Style -->
     <link rel="stylesheet" href="../dist/output.css" />
@@ -29,175 +19,195 @@
     <title>Starbucks</title>
   </head>
   <body>
-    <!-- Top Navigation Bar  -->
-    <nav class="relative shadow-md z-20">
-      <div
-        class="flex justify-between items-center h-16 relative px-4 z-20 lg:px-8"
-      >
-        <!-- Logo Img -->
-        <a href="/src/index.html" class="inline-block w-8 sm:mr-4 lg:w-10">
-          <img
-            src="./img/starbucks-logo-png-transparent.png"
-            alt=""
-            class="w-full"
-          />
-        </a>
-
-        <!-- Hamburger Icon -->
-        <div class="hamburger-container sm:hidden">
-          <input
-            type="checkbox"
-            class="toggler"
-            name="hamburger-toggler"
-            id="hamburger-toggler"
-          />
-          <div class="hamburger"><label for="hamburger-toggler"></label></div>
-        </div>
-
-        <!-- Main Desktop Menu -->
-        <div class="hidden sm:block left-0 mr-auto uppercase text-sm">
-          <ul class="flex space-x-4">
-            <li class="h-16 leading-[4rem] border-b-4 border-mdGreen">
-              <a href="/src/menu.html" class="font-semibold hover:text-mdGreen"
-                >Menu</a
-              >
-            </li>
-            <li class="h-16 leading-[4rem]">
-              <a href="#" class="font-semibold hover:text-mdGreen">Rewards</a>
-            </li>
-            <li class="h-16 leading-[4rem]">
-              <a href="#" class="font-semibold hover:text-mdGreen"
-                >Gift Cards</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <!-- Desktop buttons -->
-        <div class="hidden sm:block text-sm">
-          <a href="#" class="font-semibold mr-4 hover:text-mdGreen">
-            <i class="fa-solid align-middle fa-location-dot text-xl mr-2"></i>
-            Find a store
+    <!-- Header -->
+    <header>
+      <!-- Top Navigation Bar  -->
+      <nav class="relative shadow-md z-20">
+        <div
+          class="flex justify-between items-center h-16 relative px-4 z-20 lg:px-8"
+        >
+          <!-- Logo Img -->
+          <a href="/src/index.html" class="inline-block w-8 sm:mr-4 lg:w-10">
+            <img src="./img/logo.png" alt="" class="w-full" />
           </a>
-          <a
-            href="#"
-            class="inline-block font-medium py-1 px-4 border border-black rounded-3xl mr-2 hover:bg-black/10 transition-all"
-            >Sign in</a
-          >
-          <a
-            href="#"
-            class="inline-block font-medium py-1 px-4 text-white bg-black rounded-3xl hover:bg-black/80 transition-all"
-            >Join now</a
-          >
-        </div>
-      </div>
-    </nav>
 
-    <!-- Hamburger Menu -->
-    <div class="menu-wrapper lg:hidden" id="menu-wrapper">
-      <div class="menu-layer"></div>
-      <div class="menu">
-        <ul class="pt-8">
-          <li class="menu-item">
-            <label class="" for="menunom2">
-              Menu
-              <i class="fa-solid fa-chevron-right"></i>
-            </label>
+          <!-- Hamburger Icon -->
+          <div class="hamburger-container sm:hidden">
             <input
-              class="multi-level-input"
               type="checkbox"
-              name="menunom2"
-              id="menunom2"
-              value="Menu"
+              class="toggler"
+              name="hamburger-toggler"
+              id="hamburger-toggler"
             />
-            <ul class="menu inner-level">
-              <li class="menu-item menu-item-header" name="close-inner-level">
-                <label class="" for="menunom2">
-                  <i class="fa-solid fa-chevron-left"></i>
-                  <span name="close-inner-level-text">Menu</span>
-                </label>
+            <div class="hamburger"><label for="hamburger-toggler"></label></div>
+          </div>
+
+          <!-- Main Desktop Menu -->
+          <div class="hidden sm:block left-0 mr-auto uppercase text-sm">
+            <ul class="flex space-x-4">
+              <li class="h-16 leading-[4rem] border-b-4 border-mdGreen">
+                <a
+                  href="/src/menu.html"
+                  class="font-semibold hover:text-mdGreen"
+                  >Menu</a
+                >
               </li>
-              <li class="menu-item">
-                <label><a href="/src/menu.html"> All Products</a> </label>
+              <li class="h-16 leading-[4rem]">
+                <a
+                  href="#"
+                  class="font-semibold hover:text-mdGreen disabled-link"
+                  >Rewards</a
+                >
               </li>
-              <li class="menu-item">
-                <label> <a href="/src/menu.html">Featured</a> </label>
-              </li>
-              <li class="menu-item">
-                <label> <a href="/src/menu.html">Previous Orders</a> </label>
-              </li>
-              <li class="menu-item">
-                <label> <a href="/src/menu.html">Favorite Products</a> </label>
+              <li class="h-16 leading-[4rem]">
+                <a
+                  href="#"
+                  class="font-semibold hover:text-mdGreen disabled-link"
+                  >Gift Cards</a
+                >
               </li>
             </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#"> Rewards </a>
-          </li>
-          <li class="menu-item">
-            <a href="#"> Gift Cards </a>
-          </li>
-        </ul>
-        <!-- Divider -->
-        <hr class="m-8" />
-        <div class="mx-8 space-x-2">
-          <a
-            href="#"
-            class="inline-block text-base font-medium py-1 px-4 border border-black rounded-3xl"
-            >Sign in</a
-          >
-          <a
-            href="#"
-            class="inline-block text-base font-medium py-1 px-4 text-white bg-black rounded-3xl"
-            >Join now</a
-          >
+          </div>
+
+          <!-- Desktop buttons -->
+          <div class="hidden sm:block text-sm">
+            <a href="#" class="font-semibold mr-4 hover:text-mdGreen">
+              <i class="fa-solid align-middle fa-location-dot text-xl mr-2"></i>
+              Find a store
+            </a>
+            <a
+              href="#"
+              class="inline-block font-medium py-1 px-4 border border-black rounded-3xl mr-2 hover:bg-black/10 transition-all"
+              >Sign in</a
+            >
+            <a
+              href="#"
+              class="inline-block font-medium py-1 px-4 text-white bg-black rounded-3xl hover:bg-black/80 transition-all"
+              >Join now</a
+            >
+          </div>
         </div>
+      </nav>
 
-        <a href="#" class="flex items-center text-base font-semibold mx-8 my-6">
-          <i class="fa-solid fa-location-dot text-xl mr-3"></i>
-          Find a store
-        </a>
+      <!-- Hamburger Menu -->
+      <div class="menu-wrapper lg:hidden" id="menu-wrapper">
+        <div class="menu-layer"></div>
+        <div class="menu">
+          <ul class="pt-8">
+            <li class="menu-item">
+              <label class="" for="menunom2">
+                Menu
+                <i class="fa-solid fa-chevron-right"></i>
+              </label>
+              <input
+                class="multi-level-input"
+                type="checkbox"
+                name="menunom2"
+                id="menunom2"
+                value="Menu"
+              />
+              <ul class="menu inner-level">
+                <li class="menu-item menu-item-header" name="close-inner-level">
+                  <label class="" for="menunom2">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <span name="close-inner-level-text">Menu</span>
+                  </label>
+                </li>
+                <li class="menu-item">
+                  <label><a href="/src/menu.html"> All Products</a> </label>
+                </li>
+                <li class="menu-item">
+                  <label>
+                    <a href="/src/menu.html" class="disabled-link">Featured</a>
+                  </label>
+                </li>
+                <li class="menu-item">
+                  <label>
+                    <a href="/src/menu.html" class="disabled-link"
+                      >Previous Orders</a
+                    >
+                  </label>
+                </li>
+                <li class="menu-item">
+                  <label>
+                    <a href="/src/menu.html" class="disabled-link"
+                      >Favorite Products</a
+                    >
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="disabled-link"> Rewards </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="disabled-link"> Gift Cards </a>
+            </li>
+          </ul>
+          <!-- Divider -->
+          <hr class="m-8" />
+          <div class="mx-8 space-x-2">
+            <a
+              href="#"
+              class="inline-block text-base font-medium py-1 px-4 border border-black rounded-3xl"
+              >Sign in</a
+            >
+            <a
+              href="#"
+              class="inline-block text-base font-medium py-1 px-4 text-white bg-black rounded-3xl"
+              >Join now</a
+            >
+          </div>
+
+          <a
+            href="#"
+            class="flex items-center text-base font-semibold mx-8 my-6"
+          >
+            <i class="fa-solid fa-location-dot text-xl mr-3"></i>
+            Find a store
+          </a>
+        </div>
       </div>
-    </div>
-
-    <!-- Second Menu -->
-    <nav
-      class="hidden sm:block bg-gray-100 border border-gray-300 py-3 px-20 font-light text-sm"
-    >
-      <ul class="space-x-7">
-        <li class="inline-block py-1.5 border-b border-black">
-          <a href="#">All products</a>
-        </li>
-        <li class="inline-block py-1.5">
-          <a href="#">Featured</a>
-        </li>
-        <li class="inline-block py-1.5">
-          <a href="#">Previous Orders</a>
-        </li>
-        <li class="inline-block py-1.5">
-          <a href="#">Favorite Products</a>
-        </li>
-      </ul>
-    </nav>
+    </header>
 
     <!-- Main -->
     <main>
+      <!-- Second Menu -->
+      <nav
+        class="hidden sm:block bg-gray-100 border border-gray-300 py-3 px-20 font-light text-sm"
+      >
+        <ul class="space-x-7">
+          <li class="inline-block py-1.5 border-b border-black">
+            <a href="./menu.html">All products</a>
+          </li>
+          <li class="inline-block py-1.5">
+            <a href="#" class="disabled-link">Featured</a>
+          </li>
+          <li class="inline-block py-1.5">
+            <a href="#" class="disabled-link">Previous Orders</a>
+          </li>
+          <li class="inline-block py-1.5">
+            <a href="#" class="disabled-link">Favorite Products</a>
+          </li>
+        </ul>
+      </nav>
+
       <article class="py-10 lg:flex grid-cols-4 lg:pl-20">
         <aside class="hidden lg:block w-1/5">
           <div>
             <h4 class="text-xl font-semibold pb-4">Drinks</h4>
             <ul class="space-y-4 text-gray-500">
               <li>
-                <a href="#">Hot Coffees</a>
+                <a href="./sub-menu.html">Hot Coffees</a>
               </li>
               <li>
-                <a href="#">Hot Tea</a>
+                <a href="./sub-menu.html">Hot Tea</a>
               </li>
               <li>
-                <a href="#">Hot Drinks</a>
+                <a href="./sub-menu.html">Hot Drinks</a>
               </li>
               <li>
-                <a href="#">Frappuccino® Blended Beverages</a>
+                <a href="./sub-menu.html">Frappuccino® Blended Beverages</a>
               </li>
             </ul>
           </div>
@@ -216,7 +226,10 @@
               <div class="sm:grid grid-cols-2">
                 <!-- Cat Item #1 -->
                 <div class="text-lg py-2">
-                  <div class="flex items-center space-x-4">
+                  <a
+                    href="/src/sub-menu.html"
+                    class="flex items-center space-x-4"
+                  >
                     <div class="w-20 h-20 lg:w-24 lg:h-24">
                       <img
                         class="w-full rounded-full"
@@ -224,13 +237,16 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/sub-menu.html"> Hot Coffees </a>
-                  </div>
+                    <span> Hot Coffees </span>
+                  </a>
                 </div>
 
                 <!-- Cat Item #2 -->
                 <div class="text-lg py-2">
-                  <div class="flex items-center space-x-4">
+                  <a
+                    href="/src/sub-menu.html"
+                    class="flex items-center space-x-4"
+                  >
                     <div class="w-20 h-20 lg:w-24 lg:h-24">
                       <img
                         class="w-full rounded-full"
@@ -238,13 +254,16 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/sub-menu.html"> Hot Teas </a>
-                  </div>
+                    <span> Hot Teas </span>
+                  </a>
                 </div>
 
                 <!-- Cat Item #3 -->
                 <div class="text-lg py-2">
-                  <div class="flex items-center space-x-4">
+                  <a
+                    href="/src/sub-menu.html"
+                    class="flex items-center space-x-4"
+                  >
                     <div class="w-20 h-20 lg:w-24 lg:h-24">
                       <img
                         class="w-full rounded-full"
@@ -252,13 +271,16 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/sub-menu.html"> Hot Coffees </a>
-                  </div>
+                    <span> Hot Coffees </span>
+                  </a>
                 </div>
 
                 <!-- Cat Item #4 -->
                 <div class="text-lg py-2">
-                  <div class="flex items-center space-x-4">
+                  <a
+                    href="/src/sub-menu.html"
+                    class="flex items-center space-x-4"
+                  >
                     <div class="w-20 h-20 lg:w-24 lg:h-24">
                       <img
                         class="w-full rounded-full"
@@ -266,8 +288,8 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/sub-menu.html"> Hot Teas </a>
-                  </div>
+                    <span> Hot Teas </span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -275,11 +297,6 @@
         </section>
       </article>
     </main>
-
-    <!-- Bar -->
-    <div class="mt-10 text-center py-8 text-sm font-medium">
-      <p>*At participating stores.</p>
-    </div>
 
     <!-- Footer -->
     <footer class="shadow-top py-5 px-4 lg:px-7">

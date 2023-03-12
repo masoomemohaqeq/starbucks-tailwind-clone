@@ -1,3 +1,3 @@
 .modal-chk:checked + .modal {
-  @apply opacity-0 visible;
+  @apply opacity-100 visible;
 }

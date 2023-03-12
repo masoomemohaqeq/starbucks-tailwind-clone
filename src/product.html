@@ -7,20 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./img/starbucks-logo-png-transparent.png"
-    />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png" />
 
     <!-- Fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
 
     <!-- Style -->
     <link rel="stylesheet" href="../dist/output.css" />
@@ -36,11 +26,7 @@
       >
         <!-- Logo Img -->
         <a href="/src/index.html" class="inline-block w-8 sm:mr-4 lg:w-10">
-          <img
-            src="./img/starbucks-logo-png-transparent.png"
-            alt=""
-            class="w-full"
-          />
+          <img src="./img/logo.png" alt="" class="w-full" />
         </a>
 
         <!-- Hamburger Icon -->
@@ -63,10 +49,12 @@
               >
             </li>
             <li class="h-16 leading-[4rem]">
-              <a href="#" class="font-semibold hover:text-mdGreen">Rewards</a>
+              <a href="#" class="font-semibold hover:text-mdGreen disabled-link"
+                >Rewards</a
+              >
             </li>
             <li class="h-16 leading-[4rem]">
-              <a href="#" class="font-semibold hover:text-mdGreen"
+              <a href="#" class="font-semibold hover:text-mdGreen disabled-link"
                 >Gift Cards</a
               >
             </li>
@@ -576,7 +564,7 @@
 
       <!-- Add To Order -->
       <button
-        class="fixed right-5 bottom-5 z-30 shadow-2xl rounded-full bg-darkGreenTwo px-5 py-4 text-white text-xl font-bold"
+        class="fixed right-5 bottom-5 z-30 shadow-2xl rounded-full bg-darkGreenTwo px-5 py-4 text-white text-xl font-bold disabled-link"
       >
         Add to Order
       </button>

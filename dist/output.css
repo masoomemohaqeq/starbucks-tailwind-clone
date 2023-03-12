@@ -51,6 +51,11 @@ select {
   appearance: none;
 }
 
+.disabled-link {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 .hamburger-container {
   position: relative;
   width: 20px;
@@ -254,7 +259,7 @@ select {
 
 .modal-chk:checked + .modal {
   visibility: visible;
-  opacity: 0;
+  opacity: 1;
 }
 
 /* Product Size Animation */
@@ -1125,6 +1130,10 @@ video {
   flex: 1 1 0%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1472,10 +1481,6 @@ video {
 
 .pt-\[4\.5rem\] {
   padding-top: 4.5rem;
-}
-
-.pl-0 {
-  padding-left: 0px;
 }
 
 .pl-24 {

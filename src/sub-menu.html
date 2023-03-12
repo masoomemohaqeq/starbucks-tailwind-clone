@@ -7,20 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./img/starbucks-logo-png-transparent.png"
-    />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png" />
 
     <!-- Fontawesome -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
 
     <!-- Style -->
     <link rel="stylesheet" href="../dist/output.css" />
@@ -36,11 +26,7 @@
       >
         <!-- Logo Img -->
         <a href="/src/index.html" class="inline-block w-8 sm:mr-4 lg:w-10">
-          <img
-            src="./img/starbucks-logo-png-transparent.png"
-            alt=""
-            class="w-full"
-          />
+          <img src="./img/logo.png" alt="" class="w-full" />
         </a>
 
         <!-- Hamburger Icon -->
@@ -63,10 +49,12 @@
               >
             </li>
             <li class="h-16 leading-[4rem]">
-              <a href="#" class="font-semibold hover:text-mdGreen">Rewards</a>
+              <a href="#" class="font-semibold hover:text-mdGreen disabled-link"
+                >Rewards</a
+              >
             </li>
             <li class="h-16 leading-[4rem]">
-              <a href="#" class="font-semibold hover:text-mdGreen"
+              <a href="#" class="font-semibold hover:text-mdGreen disabled-link"
                 >Gift Cards</a
               >
             </li>
@@ -121,13 +109,23 @@
                 <label><a href="/src/menu.html"> All Products</a> </label>
               </li>
               <li class="menu-item">
-                <label> <a href="/src/menu.html">Featured</a> </label>
+                <label>
+                  <a href="/src/menu.html" class="disabled-link">Featured</a>
+                </label>
               </li>
               <li class="menu-item">
-                <label> <a href="/src/menu.html">Previous Orders</a> </label>
+                <label>
+                  <a href="/src/menu.html" class="disabled-link"
+                    >Previous Orders</a
+                  >
+                </label>
               </li>
               <li class="menu-item">
-                <label> <a href="/src/menu.html">Favorite Products</a> </label>
+                <label>
+                  <a href="/src/menu.html" class="disabled-link"
+                    >Favorite Products</a
+                  >
+                </label>
               </li>
             </ul>
           </li>
@@ -160,28 +158,28 @@
       </div>
     </div>
 
-    <!-- Second Menu -->
-    <nav
-      class="hidden sm:block bg-gray-100 border border-gray-300 py-3 pl-24 font-light text-sm"
-    >
-      <ul class="space-x-7">
-        <li class="inline-block py-1.5 border-b border-black">
-          <a href="#">All products</a>
-        </li>
-        <li class="inline-block py-1.5">
-          <a href="#">Featured</a>
-        </li>
-        <li class="inline-block py-1.5">
-          <a href="#">Previous Orders</a>
-        </li>
-        <li class="inline-block py-1.5">
-          <a href="#">Favorite Products</a>
-        </li>
-      </ul>
-    </nav>
-
     <!-- Main -->
     <main>
+      <!-- Second Menu -->
+      <nav
+        class="hidden sm:block bg-gray-100 border border-gray-300 py-3 pl-24 font-light text-sm"
+      >
+        <ul class="space-x-7">
+          <li class="inline-block py-1.5 border-b border-black">
+            <a href="./menu.html">All products</a>
+          </li>
+          <li class="inline-block py-1.5">
+            <a href="#" class="disabled-link">Featured</a>
+          </li>
+          <li class="inline-block py-1.5">
+            <a href="#" class="disabled-link">Previous Orders</a>
+          </li>
+          <li class="inline-block py-1.5">
+            <a href="#" class="disabled-link">Favorite Products</a>
+          </li>
+        </ul>
+      </nav>
+
       <article class="py-10 lg:flex lg:pl-20 xl:pl-24">
         <!-- Sidebar -->
         <aside class="hidden lg:block w-1/12">
@@ -189,16 +187,16 @@
             <h4 class="text-xl font-semibold pb-4">Drinks</h4>
             <ul class="space-y-4 text-gray-500">
               <li>
-                <a href="#">Hot Coffees</a>
+                <a href="./sub-menu.html">Hot Coffees</a>
               </li>
               <li>
-                <a href="#">Hot Tea</a>
+                <a href="./sub-menu.html">Hot Tea</a>
               </li>
               <li>
-                <a href="#">Hot Drinks</a>
+                <a href="./sub-menu.html">Hot Drinks</a>
               </li>
               <li>
-                <a href="#">Frappuccino® Blended Beverages</a>
+                <a href="./sub-menu.html">Frappuccino® Blended Beverages</a>
               </li>
             </ul>
           </div>
@@ -224,7 +222,10 @@
               <div class="flex flex-wrap justify-start">
                 <!-- Cat Item #1 -->
                 <div class="text-lg py-2 w-1/2 mb-8 md:w-1/4 md:px-3">
-                  <div class="flex flex-col items-center">
+                  <a
+                    href="/src/product.html"
+                    class="flex flex-col items-center"
+                  >
                     <div class="w-32 h-32">
                       <img
                         class="w-full rounded-full"
@@ -232,13 +233,16 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/product.html"> Hot Coffees </a>
-                  </div>
+                    <span> Hot Coffees </span>
+                  </a>
                 </div>
 
                 <!-- Cat Item #2 -->
                 <div class="text-lg py-2 w-1/2 mb-8 md:w-1/4 md:px-3">
-                  <div class="flex flex-col items-center">
+                  <a
+                    href="/src/product.html"
+                    class="flex flex-col items-center"
+                  >
                     <div class="w-32 h-32">
                       <img
                         class="w-full rounded-full"
@@ -246,13 +250,16 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/product.html"> Hot Teas </a>
-                  </div>
+                    <span> Hot Teas </span>
+                  </a>
                 </div>
 
                 <!-- Cat Item #3 -->
                 <div class="text-lg py-2 w-1/2 mb-8 md:w-1/4 md:px-3">
-                  <div class="flex flex-col items-center">
+                  <a
+                    href="/src/product.html"
+                    class="flex flex-col items-center"
+                  >
                     <div class="w-32 h-32">
                       <img
                         class="w-full rounded-full"
@@ -260,13 +267,16 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/product.html"> Hot Coffees </a>
-                  </div>
+                    <span> Hot Coffees </span>
+                  </a>
                 </div>
 
                 <!-- Cat Item #4 -->
                 <div class="text-lg py-2 w-1/2 mb-8 md:w-1/4 md:px-3">
-                  <div class="flex flex-col items-center">
+                  <a
+                    href="/src/product.html"
+                    class="flex flex-col items-center"
+                  >
                     <div class="w-32 h-32">
                       <img
                         class="w-full rounded-full"
@@ -274,13 +284,16 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/product.html"> Hot Teas </a>
-                  </div>
+                    <span> Hot Teas </span>
+                  </a>
                 </div>
 
                 <!-- Cat Item #4 -->
                 <div class="text-lg py-2 w-1/2 mb-8 md:w-1/4 md:px-3">
-                  <div class="flex flex-col items-center">
+                  <a
+                    href="/src/product.html"
+                    class="flex flex-col items-center"
+                  >
                     <div class="w-32 h-32">
                       <img
                         class="w-full rounded-full"
@@ -288,8 +301,8 @@
                         alt="cafe-americano"
                       />
                     </div>
-                    <a href="/src/product.html"> Hot Teas </a>
-                  </div>
+                    <span> Hot Teas </span>
+                  </a>
                 </div>
               </div>
             </div>
